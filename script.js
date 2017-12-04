@@ -1,4 +1,5 @@
-/*global $ navigator ipKey WuApi*/
+/*global $ navigator ipKey WuApi owApi*/
+
 $(document).ready(function() {
 			var lon;
 			var lat;
@@ -6,8 +7,11 @@ $(document).ready(function() {
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(function(position) {
 					currentPosition = position;
+					lat = position.coords.latitude;
+					lon =position.coords.longitude;
 					$("#location").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude)
 					console.log(currentPosition);
+					loadWeatherData();
 				})
 			} else {
 				alert("Your location is not supported by this browser!")
@@ -30,18 +34,19 @@ $(document).ready(function() {
 			// 				console.log("location added");
 			//  		}
 			// var api = 'https://api.wunderground.com/api//geolookup/conditions/lat=' + lat + '&lon=' + long + '&apiid'= WuApi;
-			// 			$.ajax({
-			// 				method: "GET",
-			// 				url: 'https://fcc-weather-api.glitch.me/api/current?',
-			// 				data: {
-			//     				    lon: currentPosition.coords.longitude,
-			//     				    lat: currentPosition.coords.latitude
-			// 				},
-			$.getJSON('https://fcc-weather-api.glitch.me/api/current?' + 'lon=' + currentPosition.coords.longitude + 'lat=' + currentPosition.coords.latitude);
-
-			function(data2) {
-				sucess: function(data2) {
-					console.log(data2);
+				function loadWeatherData() {
+						$.ajax({
+							method: "GET",
+							url: 'https://api.openweathermap.org/data/2.5/weather',
+							data: {
+			    				    lon: currentPosition.coords.longitude,
+			    				    lat: currentPosition.coords.latitude,
+			    				    APPID: owApi
+							},
+		
+						sucess: function(data2) {
+							console.log(data2);
+							console.log("hello");
 					var fTemp;
 					var cTemp;
 					var tempSwap = true;
@@ -71,6 +76,7 @@ $(document).ready(function() {
 					// } else if(fTemp>70){
 					// }
 				}
+				})
 			}
 });
 
