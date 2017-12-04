@@ -10,7 +10,7 @@ $(document).ready(function() {
 					lat = position.coords.latitude;
 					lon =position.coords.longitude;
 					$("#location").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude)
-					console.log(currentPosition);
+					// console.log(currentPosition);
 					loadWeatherData();
 				})
 			} else {
@@ -39,14 +39,13 @@ $(document).ready(function() {
 							method: "GET",
 							url: 'https://api.openweathermap.org/data/2.5/weather',
 							data: {
-			    				    lon: currentPosition.coords.longitude,
-			    				    lat: currentPosition.coords.latitude,
+			    				    lon: lon,
+			    				    lat: lat,
 			    				    APPID: owApi
 							},
 		
-						sucess: function(data2) {
+						success: function(data2) {
 							console.log(data2);
-							console.log("hello");
 					var fTemp;
 					var cTemp;
 					var tempSwap = true;
@@ -54,12 +53,14 @@ $(document).ready(function() {
 					var kelvin = data2.main.temp;
 					var windSpeed = data2.wind.speed;
 					var city = data2.name;
+					var icon = data2.weather[0].icon;
 					fTemp = (kelvin * (9 / 5) - 459.67).toFixed(1); //convert kelvin to farhenheit
 					cTemp = (kelvin - 273).toFixed(1);
-					console.log(city);
+					console.log(fTemp);
 					$("#city").html(city);
 					$("#weatherType").html(weatherType);
 					$("#fTemp").html(fTemp + " &#8457;");
+					$("#icon").html("<img src=https://openweathermap.org/img/w/" + icon + ".png>");
 					$("#fTemp").click(function() {
 						if (tempSwap === false) {
 							$("#fTemp").html(cTemp + " &#8451;");
