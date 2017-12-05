@@ -15,10 +15,15 @@ $(document).ready(function() {
 	} else {
 		alert("Your location is not supported by this browser!")
 	}
-
+var returnTemps;
+function callback(response) {
+  returnTemps = response;
+  //use return_first variable here
+}
 var kelvin;
 var fTemp;
 var cTemp;
+
 	function loadWeatherData() {
 		$.ajax({
 			method: "GET",
@@ -30,44 +35,51 @@ var cTemp;
 			},
 			success: function(data2) {
 				console.log(data2);
-				
+				callback(data2);
 				// var tempSwap = true;
 				var weatherType = data2.weather[0].description;
 				kelvin = data2.main.temp;
 				var windSpeed = data2.wind.speed;
 				var city = data2.name;
 				var icon = data2.weather[0].icon;
+			
 				fTemp = (kelvin * (9 / 5) - 459.67).toFixed(1); //convert kelvin to farhenheit
 				cTemp = (kelvin - 273).toFixed(1);
 				windSpeed = (2.237 * (windSpeed)).toFixed(1);
 				
 				$("#city").html(city);
 				$("#weatherType").html(weatherType);
-				$("#fTemp").html(fTemp + " &#8457;");
+				$("#temp").html(fTemp + " &#8457;");
 				$("#icon").html("<img src=https://openweathermap.org/img/w/" + icon + ".png>");
 				$("#windSpeed").html(windSpeed + "mph");
 			}
 		})
-	}				
 		
-document.getElementById('temp').onclick = function() {
-	if('fTemp' == fTemp) {
-		$("#fTemp").html(cTemp + " &#8451;")	
-	} else if ('fTemp' == cTemp) {
-		$("fTemp").html(fTemp + " &#8457;");
 	}
-};
-			
-				// $("#fTemp").click(function() {
-				// 	if (!tempSwap) {
-				// 		$("#fTemp").html(cTemp + " &#8451;");
-				// 		tempSwap = true;
-				// 	} else {
-				// 		$("fTemp").html(fTemp + " &#8457;");
-				// 		tempSwap = false;
-				// 	}
-				// });
+		
+		// document.getElementById('temp').onclick = function() {
+		// 	console.log("clicky");
+		// 	if(document.getElementById('fTemp').innerHTML == fTemp) {
+		// 		console.log("click");
+		// 		document.getElementById('fTemp').innerHTML = cTemp + " &#8451";	
+		// 		console.log("clicked");
 				
+		// 	} else if ('fTemp' == cTemp) {
+		// 		$("fTemp").html(fTemp + " &#8457;");
+		// 	}
+		// };
+	// }		
+				$("#toggleTemp").click(function() {
+					var tempSwap = true;
+					if (!tempSwap) {
+						$("#temp").html(cTemp + " &#8451;");
+						tempSwap = true;
+					} else {
+						$("fTemp").html(fTemp + " &#8457;");
+						tempSwap = false;
+					}
+				});
+			
 				
 				// if(fTemp<50){
 				//     $('body').css('background-image', 'url    ');
