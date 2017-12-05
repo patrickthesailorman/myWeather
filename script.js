@@ -16,6 +16,9 @@ $(document).ready(function() {
 		alert("Your location is not supported by this browser!")
 	}
 
+var kelvin;
+var fTemp;
+var cTemp;
 	function loadWeatherData() {
 		$.ajax({
 			method: "GET",
@@ -27,11 +30,10 @@ $(document).ready(function() {
 			},
 			success: function(data2) {
 				console.log(data2);
-				var fTemp;
-				var cTemp;
-				var tempSwap = true;
+				
+				// var tempSwap = true;
 				var weatherType = data2.weather[0].description;
-				var kelvin = data2.main.temp;
+				kelvin = data2.main.temp;
 				var windSpeed = data2.wind.speed;
 				var city = data2.name;
 				var icon = data2.weather[0].icon;
@@ -47,21 +49,24 @@ $(document).ready(function() {
 			}
 		})
 	}				
-				
-				$('#fTemp').on('click', function(event) {
-					event.preventDefault(); // To prevent following the link (optional)
-					if(fTemp == fTemp)
-				});
-
-				$("#fTemp").click(function() {
-					if (!tempSwap) {
-						$("#fTemp").html(cTemp + " &#8451;");
-						tempSwap = true;
-					} else {
-						$("fTemp").html(fTemp + " &#8457;");
-						tempSwap = false;
-					}
-				});
+		
+document.getElementById('temp').onclick = function() {
+	if('fTemp' == fTemp) {
+		$("#fTemp").html(cTemp + " &#8451;")	
+	} else if ('fTemp' == cTemp) {
+		$("fTemp").html(fTemp + " &#8457;");
+	}
+};
+			
+				// $("#fTemp").click(function() {
+				// 	if (!tempSwap) {
+				// 		$("#fTemp").html(cTemp + " &#8451;");
+				// 		tempSwap = true;
+				// 	} else {
+				// 		$("fTemp").html(fTemp + " &#8457;");
+				// 		tempSwap = false;
+				// 	}
+				// });
 				
 				
 				// if(fTemp<50){
