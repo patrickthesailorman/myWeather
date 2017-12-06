@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <?php header("Access-Control-Allow-Origin: http://ip-api.com/json, https://api.wunderground.com"); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,15 +14,19 @@
     <title>myWeather</title>
 </head>
 <body>
-
-    <div class="text-center">
+<!--<img src="assets/amanda-kerr-87755.jpg" id="bg" alt="">-->
+    <div class="text-center" id="box">
         <h1>myWeather</h1>
+        <div class="jumbotron">
         <h4>You are here:</h4>
+        <ul class="list-unstyled" style="list-style: none;">
+            <li class="btn btn-default" id="city"></li>
+            </ul> 
         <div id = "location">
         </div>
-            <div class="conatiner" id="current"> 
-                <ul class="list-unstyled">
-                    <li class="btn btn-default" id="city"></li>
+            <div class="container" id="current"> 
+             <h4> Current Conditions:</h4>
+                <ul class="list-unstyled" style="list-style: none;">
                     <li class="btn btn-default" id="weatherType"></li>
                     <li class="btn btn-default" id="temp"></li>
                     <button id="toggleTemp">Celsius/Fahrenheit</button>
@@ -31,6 +34,7 @@
                     <li class="btn btn-default" id="icon" ></li>
                  </ul> 
             </div> 
+        </div>
     </div>
     
      

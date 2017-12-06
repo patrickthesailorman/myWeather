@@ -1,14 +1,35 @@
-body{
-    background:url("");
-}
 
 h1 {
     text-align: center;
     color: aqua;
 }
 
+h4 {
+    color: silver;
+}
+
+#location {
+    color: silver;
+}
+
+#box {
+ 
+}
+
+.jumbotron{
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align:center;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    width:25%;
+}
+.container {
+    color: rgb(0,234,141);
+}
 #city {
-    
+    color: red;
 }
 
 #weatherType {
@@ -22,3 +43,8 @@ h1 {
 #fTemp {
     
 }
+.list-unstyled {
+    list-style-position: inside;
+}
+
+

@@ -50,16 +50,15 @@ $(document).ready(function() {
 				// document.getElementById("temp").setAttribute(value, fTemp)
 				$("#icon").html("<img src=https://openweathermap.org/img/w/" + icon + ".png>");
 				$("#windSpeed").html(windSpeed + "mph");
-					if(fTemp<50.0){
-		    			$('body').css('background-image', 'url("/assets/amanda-kerr-87755.jpg")');
+					if(fTemp>50.0){
+		    			$('body').css('background-image', 'url("assets/amanda-kerr-87755.jpg")');
 						} else if(fTemp>70.0){
-						$('body').css('background-image', "url('/assets/casey-horner-353940.jpg')");	
+						$('body').css('background-image', 'url("assets/casey-horner-353940.jpg")');	
 						}
 					}
 		})
 	}
 	document.getElementById('toggleTemp').onclick = function() {
-		console.log("clicky")
 		console.log(document.getElementById('temp').innerHTML)
 		console.log(fTemp)
 		if (tempSwap){
