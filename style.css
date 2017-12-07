@@ -1,57 +1,69 @@
 html { 
-  background: url(images/bg.jpg) no-repeat center center fixed; 
+  background: url(assets/amanda-kerr-87755.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+#bgimg {
+    /*background: url(assets/amanda-kerr-87755.jpg) no-repeat center center fixed; */
+	width: 100vw;
+	z-index: -1;
+}
 h1 {
     text-align: center;
     color: aqua;
 }
 
 h4 {
-    color: silver;
+    color: rgb(4, 60, 87);;
 }
 
 #location {
-    color: silver;
+    color: rgb(4, 60, 209);
 }
 
-#box {
- 
+#toggleTemp {
+     color: #68ebc5;
+     background: #0000ff;
+     border-radius: 10px;
+}
+#toggleTemp:hover {
+     color: #0000ff;
+     background: #68ebc5;
 }
 
 .jumbotron{
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.4);
     text-align:center;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
-    width:25%;
+    width: 40%;
 }
 .container {
-    color: rgb(0,234,141);
+    color: rgb(44, 15, 24);
 }
 #city {
-    color: red;
+    color: rgb(196, 14, 92);
+    font-size: x-large;
+}
+
+.list-unstyled {
+    list-style-position: inside;
+    
 }
 
 #weatherType {
-    
+    font-size: larger;
+}
+
+#temp {
+    font-size: larger;
 }
 
 #windSpeed {
-    
+    font-size: larger;
 }
-
-#fTemp {
-    
-}
-.list-unstyled {
-    list-style-position: inside;
-}
-
-

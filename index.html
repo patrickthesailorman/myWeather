@@ -13,7 +13,8 @@
     
     <title>myWeather</title>
 </head>
-<body>
+<body style="margin: 0;">
+			<img class="absolute" id="bgimg">
 <!--<img src="assets/amanda-kerr-87755.jpg" id="bg" alt="">-->
     <div class="text-center" id="box">
         <h1>myWeather</h1>
@@ -27,11 +28,14 @@
             <div class="container" id="current"> 
              <h4> Current Conditions:</h4>
                 <ul class="list-unstyled" style="list-style: none;">
+                    <li class="btn btn-default btn-large" id="icon" ></li>
                     <li class="btn btn-default" id="weatherType"></li>
+                    <h4>Temp:</h4>
                     <li class="btn btn-default" id="temp"></li>
-                    <button id="toggleTemp">Celsius/Fahrenheit</button>
+                    <button id="toggleTemp"> &#8451 / &#8457</button>
+                    <h4>Windspeed:</h4>
                     <li class="btn btn-default" id="windSpeed" ></li>
-                    <li class="btn btn-default" id="icon" ></li>
+                    
                  </ul> 
             </div> 
         </div>
