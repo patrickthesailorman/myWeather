@@ -47,7 +47,7 @@ $(document).ready(function() {
 				$("#city").html(city);
 				$("#weatherType").html(weatherType);
 				$("#temp").html(fTemp + " &#8457;");
-				$("#icon").html("<img src=https://openweathermap.org/img/w/" + icon + ".png>");
+				$("#icon").html("<img src=https://openweathermap.org/img/w/" + icon + ".png height='75' width='75'>");
 				$("#windSpeed").html(windSpeed + "mph");
 					if(fTemp>50.0){
 		    			$('#bgimg').css('background-image', 'url("assets/casey-horner-353940.jpg") ');
