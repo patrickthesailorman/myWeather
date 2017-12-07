@@ -16,7 +16,7 @@ $(document).ready(function() {
 			lat = position.coords.latitude;
 			lon = position.coords.longitude;
 			$("#location").html("latitude: " + position.coords.latitude.toFixed(4) + "<br>longitude: " + position.coords.longitude.toFixed(4))
-			// console.log(currentPosition);
+			
 			loadWeatherData();
 		})
 	} else {
@@ -47,15 +47,14 @@ $(document).ready(function() {
 				$("#city").html(city);
 				$("#weatherType").html(weatherType);
 				$("#temp").html(fTemp + " &#8457;");
-				// document.getElementById("temp").setAttribute(value, fTemp)
 				$("#icon").html("<img src=https://openweathermap.org/img/w/" + icon + ".png>");
 				$("#windSpeed").html(windSpeed + "mph");
 					if(fTemp>50.0){
-		    			$('#bgimg').css('background', 'url("assets/casey-horner-353940.jpg") ');
+		    			$('#bgimg').css('background-image', 'url("assets/casey-horner-353940.jpg") ');
 						} else if(fTemp>70.0){
 						$('#bgimg').css('background-image', 'url("assets/amanda-kerr-87755.jpg")');	
 						} else if(fTemp<50.0){
-						$('#bgimg').css('background', 'url("assets/pablo-fierro-226758.jpg")');	
+						$('body').css('background-image', 'url("assets/pablo-fierro-226758.jpg")');	
 						}
 					}
 		})

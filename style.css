@@ -1,5 +1,5 @@
-html { 
-  background: url(assets/amanda-kerr-87755.jpg) no-repeat center center fixed; 
+body { 
+  background: no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7,10 +7,10 @@ html {
 }
 
 #bgimg {
-    /*background: url(assets/amanda-kerr-87755.jpg) no-repeat center center fixed; */
 	width: 100vw;
 	z-index: -1;
 }
+
 h1 {
     text-align: center;
     color: aqua;
@@ -29,6 +29,7 @@ h4 {
      background: #0000ff;
      border-radius: 10px;
 }
+
 #toggleTemp:hover {
      color: #0000ff;
      background: #68ebc5;
@@ -43,9 +44,11 @@ h4 {
     padding: 5px;
     width: 40%;
 }
+
 .container {
     color: rgb(44, 15, 24);
 }
+
 #city {
     color: rgb(196, 14, 92);
     font-size: x-large;
