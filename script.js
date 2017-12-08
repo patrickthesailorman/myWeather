@@ -61,7 +61,7 @@ $(document).ready(function() {
 						} else if(fTemp<40.0){
 						$('body').css('background-image', 'url("https://images2.phoenixnewtimes.com/imager/u/original/6630770/jackfrozen_thumb_500x374_thumb_500x374.jpg")');
 						$('.jumbotron').css('float', 'left');
-						$('.jumbotron').css('width', '25%');
+						$('.jumbotron').css('width', '45%');
 						}
 					}
 		})
