@@ -7,6 +7,8 @@ var fTemp;
 var cTemp;
 var weatherType;
 var tempSwap = false;
+var high;
+var low;
 
 $(document).ready(function() {
 	var currentPosition;
@@ -38,6 +40,8 @@ $(document).ready(function() {
 				
 				weatherType = data2.weather[0].description;
 				kelvin = data2.main.temp;
+				low = (data2.main.temp_min * (9 / 5) - 459.67).toFixed(1);
+				high = (data2.main.temp_max * (9 / 5) - 459.67).toFixed(1);
 				var windSpeed = data2.wind.speed;
 				var city = data2.name;
 				var icon = data2.weather[0].icon;
@@ -49,6 +53,7 @@ $(document).ready(function() {
 				$("#temp").html(fTemp + " &#8457;");
 				$("#icon").html("<img src=https://openweathermap.org/img/w/" + icon + ".png height='75' width='75'>");
 				$("#windSpeed").html(windSpeed + "mph");
+				$("#summary").html("Today will see a high of " + high + "and a low of " + low + ". Mostly " + weatherType + " with a windspeed of " + windSpeed + "mph");
 					if(fTemp>50.0){
 		    			$('body').css('background-image', 'url("http://www.trbimg.com/img-57f6d089/turbine/la-1475793216-snap-photo/950/950x534 950w") ');
 						} else if(fTemp>70.0){
