@@ -50,11 +50,13 @@ $(document).ready(function() {
 				$("#icon").html("<img src=https://openweathermap.org/img/w/" + icon + ".png height='75' width='75'>");
 				$("#windSpeed").html(windSpeed + "mph");
 					if(fTemp>50.0){
-		    			$('#bgimg').css('background-image', 'url("assets/casey-horner-353940.jpg") ');
+		    			$('body').css('background-image', 'url("http://www.trbimg.com/img-57f6d089/turbine/la-1475793216-snap-photo/950/950x534 950w") ');
 						} else if(fTemp>70.0){
-						$('#bgimg').css('background-image', 'url("assets/amanda-kerr-87755.jpg")');	
-						} else if(fTemp<50.0){
-						$('body').css('background-image', 'url("assets/pablo-fierro-226758.jpg")');	
+						$('body').css('background-image', 'url("http://www.ireadculture.com/wp-content/uploads/images/43/9343/9343.jpg")');	
+						} else if(fTemp<40.0){
+						$('body').css('background-image', 'url("https://images2.phoenixnewtimes.com/imager/u/original/6630770/jackfrozen_thumb_500x374_thumb_500x374.jpg")');
+						$('.jumbotron').css('float', 'left');
+						$('.jumbotron').css('width', '25%');
 						}
 					}
 		})
