@@ -53,7 +53,7 @@ $(document).ready(function() {
 				$("#temp").html(fTemp + " &#8457;");
 				$("#icon").html("<img src=https://openweathermap.org/img/w/" + icon + ".png height='75' width='75'>");
 				$("#windSpeed").html(windSpeed + "mph");
-				$("#summary").html("Today will see a high of " + high + "and a low of " + low + ". Mostly " + weatherType + " with a windspeed of " + windSpeed + "mph");
+				$("#summary").html("Today will see a high of " + high + " and a low of " + low + ". Mostly " + weatherType + " with a windspeed of " + windSpeed + "mph");
 					if(fTemp>50.0){
 		    			$('body').css('background-image', 'url("http://www.trbimg.com/img-57f6d089/turbine/la-1475793216-snap-photo/950/950x534 950w") ');
 						} else if(fTemp>70.0){
