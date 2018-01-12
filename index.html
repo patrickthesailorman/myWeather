@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-     <!-- REQUIREMENTS
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"><!-- REQUIREMENTS
     Page requires a keys.js file with the following format
     var APIKEY = "apiKey from weatherapi.org" -->
-    
-    <title>myWeather</title>
+	<title>myWeather</title>
 </head>
 <body style="margin: 0;">
-			<img class="absolute" id="bgimg">
-    <div class="text-center" id="box">
-        <h1>myWeather</h1>
-        <div class="jumbotron">
-        <h4>You are here:</h4>
-        <ul class="list-unstyled" style="list-style: none;">
-            <li class="btn btn-default" id="city"></li>
-            </ul> 
-        <div id = "location">
-        </div>
-            <div class="container" id="current"> 
-             <h4> Current Conditions:</h4>
-                <ul class="list-unstyled" style="list-style: none;">
-                    <li class="btn btn-default btn-large" id="icon" ></li>
-                    <li class="btn btn-default" id="weatherType"></li>
-                    <h4>Temp:</h4>
-                    <li class="btn btn-default" id="temp"></li>
-                    <button id="toggleTemp"> &#8451 / &#8457</button>
-                    <h4>Windspeed:</h4>
-                    <li class="btn btn-default" id="windSpeed" ></li>
-                    <h4>Summary:</h4>
-                    <li class="btn btn-default" id="summary" ></li>
-                    
-                 </ul> 
-            </div> 
-        </div>
-    </div>
-    
-     
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	
-	<script src="keys.js"></script>
-    <script src="script.js"></script>
+	<img class="absolute" id="bgimg">
+	<div class="text-center" id="box">
+		<h1>myWeather</h1>
+		<div class="jumbotron">
+			<h4>You are here:</h4>
+			<ul class="list-unstyled" style="list-style: none;">
+				<li class="btn btn-default" id="city"></li>
+			</ul>
+			<div id="location"></div>
+			<div class="container" id="current">
+				<h4>Current Conditions:</h4>
+				<ul class="list-unstyled" style="list-style: none;">
+					<li class="btn btn-default btn-large" id="icon"></li>
+					<li class="btn btn-default" id="weatherType"></li>
+					<li style="list-style: none; display: inline">
+						<h4>Temp:</h4>
+					</li>
+					<li class="btn btn-default" id="temp"></li>
+					<li style="list-style: none">
+						<button id="toggleTemp">&#8451 / &#8457</button>
+						<h4>Windspeed:</h4>
+					</li>
+					<li class="btn btn-default" id="windSpeed"></li>
+					<li style="list-style: none; display: inline">
+						<h4>Summary:</h4>
+					</li>
+					<li class="btn btn-default" id="summary"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script> 
+	<script src="keys.js">
+	</script> 
+	<script src="script.js">
+	</script>
 </body>
 </html>
