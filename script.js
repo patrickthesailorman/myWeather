@@ -1,4 +1,4 @@
-/*global $ navigator ipKey WuApi owApi*/
+/*global $ navigator APIKEY*/
 var lon;
 var lat;
 var kelvin;
@@ -29,7 +29,7 @@ $(document).ready(function() {
 			data: {
 				lon: lon,
 				lat: lat,
-				APPID: owApi
+				APPID: APIKEY
 			},
 			success: function(data2) {
 				console.log(data2);
