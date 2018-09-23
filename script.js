@@ -50,7 +50,7 @@ $(document).ready(function() {
 				$("#windSpeed").html(windSpeed + "mph");
 				$("#summary").html("Today will see a high of " + high + " and a low of " + low + ". Mostly " + weatherType + " with a windspeed of " + windSpeed + "mph");
 				if (fTemp > 40.0) {
-					$('body').css('background-image', 'url("http://www.trbimg.com/img-57f6d089/turbine/la-1475793216-snap-photo/950/950x534 950w") ');
+					$('body').css('background-image', 'url("https://unsplash.com/@adspedia?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=") ');
 				} else if (fTemp > 70.0) {
 					$('body').css('background-image', 'url("http://www.ireadculture.com/wp-content/uploads/images/43/9343/9343.jpg")');
 				} else if (fTemp < 40.0) {
@@ -73,3 +73,5 @@ $(document).ready(function() {
 		}
 	};
 });
+
+https://images.unsplash.com/photo-1509833214245-2078371af406?ixlib=rb-0.3.5&s=329bb81bdc150be47294638a425e18e9&auto=format&fit=crop&w=2824&q=80
